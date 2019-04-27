@@ -52,7 +52,7 @@ DB2_INSTALL_PATH=/opt/ibm/db2/V10.1
 
 
 list_instances() {
-  $DB2_INSTALL_PATH/bin/db2greg -dump | grep -E '^I,DB2' | \
+  $DB2_INSTALL_PATH/bin/db2greg -dump | grep -Ea '^I,DB2' | \
         cut -d, --output-delimiter=" " -s -f4,5,7
 }
 
